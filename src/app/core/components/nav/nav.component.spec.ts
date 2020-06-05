@@ -12,45 +12,45 @@ import { NavToolbarComponent } from './nav-toolbar/nav-toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { sideNavPath } from '../../../nav-routing';
-import { MatExpansionModule } from '@angular/material';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 describe('NavComponent', () => {
-    let component: NavComponent;
-    let fixture: ComponentFixture<NavComponent>;
+  let component: NavComponent;
+  let fixture: ComponentFixture<NavComponent>;
 
-    beforeEach(async(() => {
-        TestBed.configureTestingModule({
-            declarations: [
-                NavComponent,
-                NavMenuItemComponent,
-                NavToolbarComponent,
-            ],
-            imports: [
-                RouterTestingModule.withRoutes([
-                    {
-                        path: sideNavPath,
-                        children: [],
-                    },
-                ]),
-                MatSidenavModule,
-                LogoModule,
-                MatListModule,
-                MatIconModule,
-                MatToolbarModule,
-                MatExpansionModule,
-                BrowserAnimationsModule,
-                HttpClientTestingModule,
-            ],
-        }).compileComponents();
-    }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        NavComponent,
+        NavMenuItemComponent,
+        NavToolbarComponent,
+      ],
+      imports: [
+        RouterTestingModule.withRoutes([
+          {
+            path: sideNavPath,
+            children: [],
+          },
+        ]),
+        MatSidenavModule,
+        LogoModule,
+        MatListModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatExpansionModule,
+        BrowserAnimationsModule,
+        HttpClientTestingModule,
+      ],
+    }).compileComponents();
+  }));
 
-    beforeEach(() => {
-        fixture = TestBed.createComponent(NavComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(NavComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
