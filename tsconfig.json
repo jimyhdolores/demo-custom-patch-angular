@@ -1,7 +1,27 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
+    "paths": {
+      "@demo/app/*": [
+        "app/*"
+      ],
+      "@demo/core/*": [
+        "app/core/*"
+      ],
+      "@demo/auth/*": [
+        "app/auth/*"
+      ],
+      "@demo/components/*": [
+        "app/core/components/*"
+      ],
+      "@demo/pages/*": [
+        "app/page/*"
+      ],
+      "@demo/services/*": [
+        "app/core/services/*"
+      ],
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -12,9 +32,6 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "lib": [
       "es2018",
       "dom"

@@ -1,46 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-import {
-    NavigationService,
-    Page,
-} from '../../services/navigation/navigation.service';
-import { NavRoute } from '../../../nav-routing';
-import { AuthService } from '../../../auth/auth.service';
-import { ActivatedRoute, Router } from '@angular/router';
+// import {
+//     NavigationService,
+//     Page,
+// } from '../../services/navigation/navigation.service';
+// import { NavRoute } from '../../../nav-routing';
+// import { AuthService } from '../../../auth/auth.service';
+import { Router } from '@angular/router';
+import { NavigationService, Page } from '@demo/services/navigation/navigation.service';
+import { AuthService } from '@demo/auth/auth.service';
+import { NavRoute } from '@demo/app/nav-routing';
+
+// import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
-    selector: 'app-nav',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-    isOpen = true;
+  isOpen = true;
 
-    constructor(
-        private navigationService: NavigationService,
-        private authService: AuthService,
-        private router: Router,
-    ) {}
+  constructor(
+    private navigationService: NavigationService,
+    private authService: AuthService,
+    private router: Router,
+  ) { }
 
-    ngOnInit() {}
+  ngOnInit() { }
 
-    public toggleSideNav() {
-        this.isOpen = !this.isOpen;
-    }
+  public toggleSideNav() {
+    this.isOpen = !this.isOpen;
+  }
 
-    public getNavigationItems(): NavRoute[] {
-        return this.navigationService.getNavigationItems();
-    }
+  public getNavigationItems(): NavRoute[] {
+    return this.navigationService.getNavigationItems();
+  }
 
-    public getActivePage(): Page {
-        return this.navigationService.getActivePage();
-    }
+  public getActivePage(): Page {
+    return this.navigationService.getActivePage();
+  }
 
-    public logout() {
-        this.authService.logout();
-        this.router.navigate(['login'], { replaceUrl: true });
-    }
+  public logout() {
+    this.authService.logout();
+    this.router.navigate(['login'], { replaceUrl: true });
+  }
 
-    public getPreviousUrl(): string[] {
-        return this.navigationService.getPreviousUrl();
-    }
+  public getPreviousUrl(): string[] {
+    return this.navigationService.getPreviousUrl();
+  }
 }
