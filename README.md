@@ -1,7 +1,8 @@
 # DemoCustomPatchAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Cuando un proyecto crece y tenemos muchas carpetas, las rutas se ven super largas, y la verdad no se ve muy llamativo, para esto podemos customizar nuestras rutas en el archivo tsconfig.json
 
+<<<<<<< HEAD
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -23,3 +24,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
+=======
+Más información en: https://dev.to/jimyhdolores/custom-patch-tsconfig-json-typescript-220f
+>>>>>>> f72d9c68bd50acced38b4b993ecb592fc1e60520
